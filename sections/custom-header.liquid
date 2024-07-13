@@ -1,0 +1,66 @@
+<!-- header-start -->
+<header>
+  <div class="mobile-header">
+    <div class="menu-icon" id="toggleButton">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <a href="#" class="logo">
+      <img src="{{ section.settings.header_logo | img_url: 'master' }}" alt="logo-img">
+    </a>
+  </div>
+  <div class="container" id="navbar">
+    <a href="#" class="logo">
+      <img src="{{ section.settings.header_logo | img_url: 'master' }}" alt="logo-img">
+    </a>
+    <span class="center-text">{{ section.settings.header_text }}</span>
+    <a href="{{ section.settings.button_url }}" class="main-btn">{{ section.settings.button_text }} <img src="https://cdn.shopify.com/s/files/1/0525/2713/6964/files/arrow-right.svg?v=1720785992" alt="arrow-right"></a>
+  </div>
+</header>
+
+<!-- header-end-->
+{% schema %}
+{
+  "name": "Custom Header",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "header_logo",
+      "label": "Upload your logo"
+    },
+    {
+      "type": "header",
+      "content": "Header Text"
+    },
+    {
+      "type": "text",
+      "id": "header_text",
+      "label": "Header Text",
+      "default": "Welcome to our store"
+    },
+    {
+      "type": "header",
+      "content": "Button Settings"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Shop Now"
+    },
+    {
+      "type": "url",
+      "id": "button_url",
+      "label": "Button URL",
+      "default": "/collections/all"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Header",
+      "category": "custom header"
+    }
+  ]
+}
+{% endschema %}

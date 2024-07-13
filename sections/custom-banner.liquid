@@ -1,0 +1,76 @@
+<!-- banner-start -->
+<div class="banner-section">
+  <div class="banner-top-img">
+    <img src="https://cdn.shopify.com/s/files/1/0525/2713/6964/files/banner-bg.svg?v=1720785993" alt="banner-img">
+  </div>
+  <div class="banner-bottom-img">
+    <img src="https://cdn.shopify.com/s/files/1/0525/2713/6964/files/banner-bg.svg?v=1720785993" alt="banner-img">
+  </div>
+  <div class="container">
+    <div class="banner-inner">
+      <h1>The Gift Guide</h1>
+      <p>Discover Joy: Your Ultimate Holiday Gift Destination. Explore our curated selection and find the perfect
+        gifts to delight your loved ones this holiday season.</p>
+      <a href="#" class="main-btn btn-black btn-black">Shop Now <img src="https://cdn.shopify.com/s/files/1/0525/2713/6964/files/arrow-right.svg?v=1720785992"
+          alt="arrow-right"></a>
+    </div>
+  </div>
+</div>
+<!-- banner-end -->
+  
+{% schema %}
+      {
+        "name": "Custom Banner",
+        "settings": [
+    {
+      "type": "image_picker",
+      "id": "banner_top_image",
+      "label": "Banner Top Image",
+    },
+    {
+      "type": "image_picker",
+      "id": "banner_bottom_image",
+      "label": "Banner Bottom Image",
+    },
+    {
+      "type": "header",
+      "content": "Banner Content"
+    },
+    {
+      "type": "text",
+      "id": "banner_title",
+      "label": "Banner Title",
+      "default": "The Gift Guide"
+    },
+    {
+      "type": "textarea",
+      "id": "banner_description",
+      "label": "Banner Description",
+      "default": "Discover Joy: Your Ultimate Holiday Gift Destination. Explore our curated selection and find the perfect gifts to delight your loved ones this holiday season."
+    },
+    {
+      "type": "header",
+      "content": "Button Settings"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Shop Now"
+    },
+    {
+      "type": "url",
+      "id": "button_url",
+      "label": "Button URL",
+      "default": "/collections/all"
+    }
+  ],
+      "presets": [
+        {
+          "name": "Banner Section",
+          "category": "custom sections"
+        }
+      ]
+    }
+
+{% endschema %}
